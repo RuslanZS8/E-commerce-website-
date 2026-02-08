@@ -1,0 +1,165 @@
+/* Import style.css */
+@import "style.css";
+
+
+/* Shopping Page */
+
+.items {
+	display: grid;
+	grid-template-columns: repeat(6, calc(16.6667% - 25px));
+	column-gap: 30px;
+	row-gap: 40px;
+}
+
+.item {
+	height: 100%; /* Используется для заполнения всех строк grid */
+    position: relative;
+    overflow: hidden;
+}
+
+.item-img {
+	display: block;
+	width: 100%;
+    max-width: 100%;
+    height: auto;
+	border-radius: 12px;
+	object-fit: cover; /* Для того, чтобы изображения не искажались */
+}
+
+.item-info {
+	padding: 0 10px;
+}
+
+.item-price {
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--primary-color);
+	padding-top: 15px;
+}
+
+.price-sale {
+	font-size: 14px;
+	font-weight: 400;
+	color: #868695;
+	text-decoration: line-through;
+	padding-left: 8px;
+}
+
+.item-title {
+	font-size: 15px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 8px 0 15px;
+}
+
+.item-order {
+	font-size: 14px;
+    line-height: 20px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+    font-weight: 500;
+    text-transform: initial;
+
+    gap: 8px;
+
+    padding: 3px 5px 5px;
+    padding: 7px 0;
+
+
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.item-order:hover, .go-cart:hover {
+	background-color: rgba(105, 90, 255, .9);
+}
+
+
+
+/* Plus & Minux, Count */
+
+.item-botton {
+    display: grid;
+    grid-template-columns: auto 50px;
+    column-gap: 8px;
+	cursor: default;
+}
+
+.go-cart {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+    height: 38px;
+    border-radius: 12px;
+}
+
+.go-cart img {
+	width: 16px;
+}
+
+.item-counter {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	border-radius: 12px;
+	text-align: center;
+	background-color: rgba(105, 90, 255, .1); 
+    align-content: center;
+    border: 3px solid transparent;
+	cursor: default;
+}
+
+.count-number, .count-minus, .count-plus {
+	font-size: 14px;
+	font-weight: 500;
+
+	height: 32px;
+    line-height: 32px;
+}
+
+.count-minus, .count-plus {
+	position: relative;
+    border: none;
+    cursor: pointer;
+	background-color: transparent;
+    border-radius: 10px;
+    transition: background-color .3s;
+}
+
+.count-minus:hover, .count-plus:hover {
+    background-color: rgba(105, 90, 255, .12);
+}
+
+.count-minus:after, .count-plus:after, .count-minus:before, .count-plus:before {
+    content: "";
+    background-color: #242424;
+    border-radius: 4px;
+    width: 12px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 6px);
+}
+.count-plus:before {
+    transform: rotate(-90deg);
+}
+
+/* Media */
+@media (max-width: 1280px) {
+	.items {
+        grid-template-columns: repeat(4, calc(25% - 22px));
+    }
+}
+
+@media (max-width: 768px) {
+    .items {
+        grid-template-columns: repeat(2, calc(50% - 15px));
+        row-gap: 32px;
+    }
+}

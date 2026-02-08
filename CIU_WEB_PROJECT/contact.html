@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="assets/css/contact.css">
+	<link rel="icon" href="assets/img/logo.svg">
+	<!-- import HTML components -->
+	<script src="assets/components/header.js"></script>
+</head>
+
+<body>
+	<!-- Header -->
+	<header-component></header-component>
+
+	<!-- Main -->
+	<main>
+		<div class="contact">
+			<div class="contact_inner">
+
+				<h2>Fill the form to <span class="accent_color">Contact Us</span></h2>
+
+				<form action="" method="" class="custom-field">
+
+					<label for="name">
+						Name:
+						<input type="text" placeholder="Your Name" id="name" minlength="1" maxlength="35" required>
+					</label>
+
+					<label for="surname">
+						Surname:
+						<input type="text" placeholder="Your Surname" id="surname" minlength="1" maxlength="35"
+							required>
+					</label>
+
+					<label for="email">
+						E-mail:
+						<input type="email" placeholder="E-mail" id="email" minlength="5" maxlength="35" required>
+					</label>
+
+					<label for="comment">Comment:</label>
+					<textarea id="comment" placeholder="Your comment" rows="5" cols="33" minlength="1" maxlength="300"
+						required></textarea>
+
+					<button type="submit" class="accent_button">Send</button>
+
+				</form>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

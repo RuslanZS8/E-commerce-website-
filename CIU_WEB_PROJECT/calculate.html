@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculate</title>
+	<link rel="stylesheet" href="assets/css/calculate.css">
+	<link rel="icon" href="assets/img/logo.svg">
+	<!-- import HTML components -->
+	<script src="assets/components/header.js"></script>
+	<script src="assets/components/footer.js"></script>
+</head>
+
+<body>
+	<!-- Header -->
+	<header-component></header-component>
+
+	<!-- Main -->
+	<main>
+		<div class="container">
+			
+			<!-- Empty Cart -->
+			<div class="cart-empty" id="cart-empty">
+				<div class="cart-empty_inner">
+					<h1 class="cart-empty_title">Your cart is empty</h1>
+					<p class="cart-empty_text">Take a look at the shopping page to add items for calculation</p> 
+					<a class="cart-empty_btn accent_button" href="/index.html">Go Shopping</a>
+				</div>
+			</div>
+
+			<!-- Cart -->
+			<form class="cart hidden" id="cart">
+				<div class="cart_content">
+					<div class="cart_inner">
+						<h1 class="cart_title">Cart</h1>
+
+						<div class="cart_subtitle">
+							<label class="item_checkbox">
+								<input type="checkbox" checked>
+							</label>
+							<div>Item</div>
+							<div>Mo/payment</div>
+							<div>Quantity</div>
+							<div>Cost</div>
+						</div>
+
+						<div class="cart_items" id="cart_items">
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="cart_sidebar">
+					<div class="cart_inner">
+						<p class="cart-total_cost">
+							<span class="cart_title">Total Cost:</span>
+							<span class="total_cost">$0.00</span>
+						</p>
+						<a class="cart-calculate_btn accent_button" href="#">Calculate</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer-component></footer-component>
+
+	<!-- Scripts -->
+	<script src="assets/js/calculate.js"></script>
+</body>
+
+</html>
